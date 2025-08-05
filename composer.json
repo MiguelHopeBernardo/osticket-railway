@@ -1,0 +1,44 @@
+{
+    "name": "osticket/osticket",
+    "description": "osTicket is a widely-used open source support ticket system",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "ext-gd": "*",
+        "ext-imap": "*",
+        "ext-mbstring": "*",
+        "ext-xml": "*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-mysqli": "*",
+        "ext-iconv": "*",
+        "ext-fileinfo": "*",
+        "ext-phar": "*",
+        "ext-spl": "*",
+        "ext-tokenizer": "*",
+        "ext-ctype": "*",
+        "ext-session": "*",
+        "ext-filter": "*",
+        "ext-hash": "*",
+        "ext-pcre": "*",
+        "ext-reflection": "*",
+        "ext-standard": "*",
+        "ext-xmlreader": "*",
+        "ext-xmlwriter": "*",
+        "ext-zlib": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "osTicket\\": "include/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+} 

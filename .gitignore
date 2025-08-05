@@ -1,0 +1,41 @@
+# osTicket specific
+include/ost-config.php
+upload/include/ost-config.php
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+cache/
+tmp/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Composer
+vendor/
+composer.lock
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Uploads (if you want to exclude them)
+upload/
+
+# Backup files
+*.bak
+*.backup 
