@@ -1,21 +1,15 @@
 FROM php:7.4-apache
 
-# Install basic dependencies
+# Install basic dependencies for GD
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install PHP extensions one by one
-RUN docker-php-ext-install pdo
+# Install only extensions that aren't already included
 RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-install mysqli
-RUN docker-php-ext-install mbstring
-RUN docker-php-ext-install xml
-RUN docker-php-ext-install zip
-RUN docker-php-ext-install curl
-RUN docker-php-ext-install json
 
 # Configure and install GD
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
