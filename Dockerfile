@@ -1,6 +1,6 @@
 FROM php:8.1-apache
 
-# Install system dependencies
+# Install only essential system dependencies
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
@@ -9,37 +9,14 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libonig-dev \
     libcurl4-openssl-dev \
-    libgd-dev \
-    unzip \
-    git \
     && rm -rf /var/lib/apt/lists/*
 
-# Configure and install PHP extensions
+# Install only the most essential PHP extensions
+RUN docker-php-ext-install pdo pdo_mysql mysqli mbstring xml zip curl json
+
+# Install GD with minimal configuration
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) \
-    gd \
-    mbstring \
-    xml \
-    zip \
-    curl \
-    json \
-    openssl \
-    pdo \
-    pdo_mysql \
-    mysqli \
-    iconv \
-    fileinfo \
-    phar \
-    tokenizer \
-    ctype \
-    session \
-    filter \
-    hash \
-    pcre \
-    reflection \
-    xmlreader \
-    xmlwriter \
-    zlib
+    && docker-php-ext-install gd
 
 # Enable Apache modules
 RUN a2enmod rewrite
