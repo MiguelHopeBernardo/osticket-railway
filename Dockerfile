@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libcurl4-openssl-dev \
     libgd-dev \
-    libimap-dev \
     unzip \
     git \
     && rm -rf /var/lib/apt/lists/*
@@ -40,8 +39,7 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     reflection \
     xmlreader \
     xmlwriter \
-    zlib \
-    imap
+    zlib
 
 # Enable Apache modules
 RUN a2enmod rewrite
