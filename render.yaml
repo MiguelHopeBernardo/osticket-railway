@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: osticket
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APACHE_DOCUMENT_ROOT
+        value: /var/www/html
+
+databases:
+  - name: osticket-db
+    databaseName: osticket
+    user: osticket
+    plan: free 
