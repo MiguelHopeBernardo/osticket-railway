@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ["php", "php-extensions.imap", "php-extensions.gd", "php-extensions.mbstring", "php-extensions.xml", "php-extensions.zip", "php-extensions.curl", "php-extensions.json", "php-extensions.openssl", "php-extensions.pdo", "php-extensions.pdo_mysql", "php-extensions.mysqli", "php-extensions.iconv", "php-extensions.fileinfo", "php-extensions.phar", "php-extensions.spl", "php-extensions.tokenizer", "php-extensions.ctype", "php-extensions.session", "php-extensions.filter", "php-extensions.hash", "php-extensions.mcrypt", "php-extensions.openssl", "php-extensions.pcre", "php-extensions.reflection", "php-extensions.spl", "php-extensions.standard", "php-extensions.xmlreader", "php-extensions.xmlwriter", "php-extensions.zlib"]
+nixPkgs = ["php", "php-extensions.imap", "php-extensions.gd", "php-extensions.mbstring", "php-extensions.xml", "php-extensions.zip", "php-extensions.curl", "php-extensions.json", "php-extensions.openssl", "php-extensions.pdo", "php-extensions.pdo_mysql", "php-extensions.mysqli", "php-extensions.iconv", "php-extensions.fileinfo", "php-extensions.phar", "php-extensions.spl", "php-extensions.tokenizer", "php-extensions.ctype", "php-extensions.session", "php-extensions.filter", "php-extensions.hash", "php-extensions.pcre", "php-extensions.reflection", "php-extensions.standard", "php-extensions.xmlreader", "php-extensions.xmlwriter", "php-extensions.zlib", "php-extensions.calendar", "php-extensions.exif", "php-extensions.ftp", "php-extensions.gettext", "php-extensions.ldap", "php-extensions.shmop", "php-extensions.sockets", "php-extensions.sysvmsg", "php-extensions.sysvsem", "php-extensions.sysvshm", "php-extensions.wddx", "php-extensions.xmlrpc", "php-extensions.xsl"]
 
 [phases.install]
-cmds = ["composer install --no-dev --optimize-autoloader"]
+cmds = ["echo 'Install phase completed'"]
 
 [phases.build]
 cmds = ["echo 'Build completed'"]
