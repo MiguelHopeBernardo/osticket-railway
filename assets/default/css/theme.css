@@ -287,11 +287,13 @@ h2, .subject {
   background-color: #0299d2;
 }
 body {
-  background: url('../images/page_bg.png') top left repeat-x #c8c8c8;
+  background: url('../images/pupqc.jpg') center;
+  background-size: cover;
 }
 #container {
+  margin-top: 60px;
   background: #fff;
-  width: 840px;
+  width: 1000px;
   margin: 0 auto;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
@@ -417,7 +419,8 @@ body {
 .front-page-button {
 }
 .main-content {
-  width: 565px;
+  width: 100%;
+  box-sizing: border-box;
 }
 #landing_page #new_ticket {
   margin-top: 40px;
